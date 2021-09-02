@@ -1,18 +1,14 @@
-import pokemonCardTpl from './templates/pokemon-card.hbs'
+import pokemonCardTpl from './templates/pokemon-card.hbs';
+import API from './api-service';
+import getRefs from './get-refs';
 
 console.log('Hello, World! (01-fetch-api.js)')
 
 
-const refs = {
-    cardContainer: document.querySelector('.js-card-container'),
-    searchForm: document.querySelector('.js-search-form')
-}
+const refs = getRefs();
 
 refs.searchForm.addEventListener('submit', onSearch);
 
-// fetchPokemon(5)
-//     .then(renderPocemonCard)
-//     .catch(error => console.log(error));
 
 function onSearch(e) {
     e.preventDefault();
@@ -22,7 +18,7 @@ function onSearch(e) {
     //Репета: Модуль 12 НТТР-запросы; время:  1:13:50
     const searchQuery = form.elements.query.value;
     
-    fetchPokemon(searchQuery)
+    API.fetchPokemon(searchQuery)
     .then(renderPocemonCard)
         .catch(error => {
             //console.log('Это CATCH');
@@ -33,11 +29,6 @@ function onSearch(e) {
  }
 
 
-function fetchPokemon(pokemonId) {
-    return fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonId}`)
-        .then(response => response.json());
-   
- };
 
 function renderPocemonCard(pokemon) {
      const markup = pokemonCardTpl(pokemon);
