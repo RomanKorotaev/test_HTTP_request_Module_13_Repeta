@@ -10,18 +10,22 @@ const refs = {
 
 console.log('Hello, World! (01-fetch-api.js)')
 
-const r = fetch('https://pokeapi.co/api/v2/pokemon/1')
+
+fetchPokemonById()
+
+function fetchPokemonById() {
+     fetch('https://pokeapi.co/api/v2/pokemon/10')
     .then(response => {
         return response.json();
     })
-    .then(pokemon => {
-        console.log(pokemon);
-        const markup = pokemonCardTpl(pokemon);
-        //console.log(markup);
-        refs.cardContainer.innerHTML = markup;
-    })
+    .then(renderPocemonCard)
     .catch(error => {
         console.log(error);
     } )
+ };
 
-//console.log (r)
+function renderPocemonCard(pokemon) {
+     const markup = pokemonCardTpl(pokemon);
+    //console.log(markup);
+    refs.cardContainer.innerHTML = markup;
+ }
