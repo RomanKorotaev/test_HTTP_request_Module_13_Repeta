@@ -11,14 +11,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/RomanKorotaev/test_HTTP_request_Module_13_Repeta.git"
+    "url": "git+https://github.com/RomanKorotaev/test_HTTP_request_Module_12_Repeta.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/RomanKorotaev/test_HTTP_request_Module_13_Repeta/issues"
+    "url": "https://github.com/RomanKorotaev/test_HTTP_request_Module_12_Repeta/issues"
   },
-  "homepage": "https://github.com/RomanKorotaev/test_HTTP_request_Module_13_Repeta#readme",
+  "homepage": "https://github.com/RomanKorotaev/test_HTTP_request_Module_12_Repeta#readme",
   "devDependencies": {
     "parcel-bundler": "^1.12.5"
   }
