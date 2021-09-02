@@ -20,6 +20,9 @@
   },
   "homepage": "https://github.com/RomanKorotaev/test_HTTP_request_Module_12_Repeta#readme",
   "devDependencies": {
-    "parcel-bundler": "^1.12.5"
+    "parcel-bundler": "^1.12.5",
+    "parcel-plugin-handlebars-precompile": "^1.0.2",
+    "parcel-plugin-nuke-dist": "^1.0.1"
+
   }
 }
